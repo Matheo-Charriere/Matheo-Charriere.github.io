@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathéo Charrière — Ski Freestyle Halfpipe</title>
+<meta name="description" content="Mathéo Charrière, skieur freestyle halfpipe suisse. Dossier de partenariat et de sponsoring.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0c0b09;
+    --bg-alt: #131110;
+    --ink: #f2ede4;
+    --ink-dim: #b9b0a2;
+    --ink-faint: #786f62;
+    --gold: #c9a15a;
+    --gold-bright: #e3bd7a;
+    --hairline: rgba(201,161,90,0.25);
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+
+  img{ display:block; max-width:100%; }
+
+  a{ color:inherit; }
+
+  .wrap{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 6vw;
+  }
+
+  .eyebrow{
+    font-family:var(--sans);
+    font-size:0.72rem;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:500;
+  }
+
+  .hairline{
+    width:100%;
+    height:1px;
+    background:var(--hairline);
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:100;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:1.6rem 6vw;
+    mix-blend-mode:difference;
+  }
+  .nav .mark{
+    font-family:var(--serif);
+    font-size:1.05rem;
+    letter-spacing:0.04em;
+    color:var(--ink);
+  }
+  .nav nav{
+    display:flex;
+    gap:2.4rem;
+  }
+  .nav nav a{
+    font-size:0.72rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--ink);
+    opacity:0.85;
+  }
+  @media (max-width:720px){
+    .nav nav{ display:none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    height:100vh;
+    min-height:640px;
+    width:100%;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+  }
+  .hero img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:58% 30%;
+    filter:saturate(0.92) contrast(1.05);
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(180deg, rgba(8,7,6,0.55) 0%, rgba(8,7,6,0.15) 30%, rgba(8,7,6,0.55) 75%, rgba(8,7,6,0.92) 100%),
+      linear-gradient(90deg, rgba(8,7,6,0.5) 0%, rgba(8,7,6,0) 45%);
+  }
+  .hero-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    padding:0 6vw 5.5rem;
+  }
+  .hero-kicker{
+    display:flex;
+    align-items:center;
+    gap:0.9rem;
+    margin-bottom:1.4rem;
+  }
+  .hero-kicker .line{
+    width:40px; height:1px; background:var(--gold);
+  }
+  .hero-kicker span{
+    font-size:0.72rem;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:var(--gold-bright);
+  }
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(3rem, 9vw, 7.2rem);
+    line-height:0.95;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+    max-width:14ch;
+  }
+  .hero h1 em{
+    font-style:italic;
+    font-weight:400;
+    color:var(--gold-bright);
+  }
+  .hero-sub{
+    margin-top:1.6rem;
+    max-width:38ch;
+    font-size:1.02rem;
+    color:var(--ink-dim);
+    font-weight:300;
+  }
+  .hero-bottom{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:2rem;
+    margin-top:2.6rem;
+  }
+  .cta{
+    display:inline-flex;
+    align-items:center;
+    gap:0.8rem;
+    padding:1rem 2.1rem;
+    border:1px solid var(--gold);
+    color:var(--gold-bright);
+    text-decoration:none;
+    font-size:0.78rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    transition:all .35s ease;
+    white-space:nowrap;
+  }
+  .cta:hover{
+    background:var(--gold);
+    color:#100d09;
+  }
+  .hero-ctas{
+    display:flex;
+    align-items:center;
+    gap:1.2rem;
+    flex-wrap:wrap;
+  }
+  .cta-phone{
+    font-size:0.82rem;
+    letter-spacing:0.06em;
+    color:var(--ink-dim);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    transition:all .3s ease;
+  }
+  .cta-phone:hover{
+    color:var(--gold-bright);
+    border-bottom-color:var(--gold-bright);
+  }
+  .hero-meta{
+    display:flex;
+    gap:2.4rem;
+    font-size:0.72rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+  .hero-meta strong{
+    display:block;
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:1.1rem;
+    color:var(--ink);
+    text-transform:none;
+    letter-spacing:0;
+  }
+  .scroll-cue{
+    position:absolute;
+    right:6vw; bottom:2.2rem;
+    z-index:2;
+    writing-mode:vertical-rl;
+    font-size:0.68rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+  }
+  .scroll-cue::after{
+    content:"";
+    width:1px; height:46px;
+    background:linear-gradient(var(--gold), transparent);
+  }
+  @media (max-width:720px){ .scroll-cue{ display:none; } }
+
+  /* ---------- SECTION LABELS ---------- */
+  .section-head{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:2rem;
+    padding:7rem 0 3.4rem;
+    align-items:end;
+  }
+  .section-head .num{
+    font-family:var(--serif);
+    font-style:italic;
+    color:var(--gold);
+    font-size:0.95rem;
+  }
+  .section-head h2{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(2.1rem, 4.4vw, 3.6rem);
+    line-height:1.05;
+    letter-spacing:-0.01em;
+  }
+  @media (max-width:800px){
+    .section-head{ grid-template-columns:1fr; gap:0.8rem; padding-top:5rem; }
+  }
+
+  /* ---------- INTRO / CHIFFRES ---------- */
+  .stats-strip{
+    padding:3.2rem 0;
+  }
+  .stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+  }
+  .stats-grid .stat{
+    padding:1.6rem 1.8rem 0 0;
+    border-left:1px solid var(--hairline);
+    padding-left:1.8rem;
+  }
+  .stats-grid .stat:first-child{ border-left:none; padding-left:0; }
+  .stat .n{
+    font-family:var(--serif);
+    font-size:clamp(2rem, 3.4vw, 3rem);
+    color:var(--gold-bright);
+    font-style:italic;
+    line-height:1;
+  }
+  .stat .l{
+    margin-top:0.7rem;
+    font-size:0.72rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+  @media (max-width:820px){
+    .stats-grid{ grid-template-columns:repeat(2,1fr); row-gap:2.2rem; }
+    .stats-grid .stat:nth-child(3){ border-left:none; padding-left:0; }
+  }
+
+  /* ---------- PARCOURS (editorial magazine grid) ---------- */
+  .parcours{
+    padding-bottom:6rem;
+  }
+  .parcours-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:4.5vw;
+    align-items:start;
+  }
+  .parcours-photo{
+    position:sticky;
+    top:6rem;
+  }
+  .parcours-photo .frame{
+    position:relative;
+    overflow:hidden;
+  }
+  .parcours-photo img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    object-position:22% 30%;
+    filter:grayscale(1) contrast(1.05);
+  }
+  .parcours-photo .frame::after{
+    content:"";
+    position:absolute; inset:0;
+    box-shadow: inset 0 0 0 1px var(--hairline);
+  }
+  .parcours-photo .cap{
+    margin-top:0.9rem;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    color:var(--ink-faint);
+    display:flex;
+    justify-content:space-between;
+  }
+  .parcours-photo .cap span:last-child{ color:var(--gold); }
+
+  .bio p{
+    font-family:var(--serif);
+    font-weight:300;
+    font-size:clamp(1.15rem, 1.7vw, 1.5rem);
+    line-height:1.55;
+    color:var(--ink-dim);
+    margin-bottom:1.6rem;
+  }
+  .bio p:first-of-type::first-letter{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:4.6rem;
+    line-height:0.7;
+    float:left;
+    padding-right:0.9rem;
+    padding-top:0.6rem;
+    color:var(--gold-bright);
+  }
+  .bio strong{ color:var(--ink); font-weight:500; }
+
+  .timeline{
+    margin-top:3rem;
+    border-top:1px solid var(--hairline);
+  }
+  .tl-row{
+    display:grid;
+    grid-template-columns:110px 1fr;
+    gap:2rem;
+    padding:1.5rem 0;
+    border-bottom:1px solid var(--hairline);
+  }
+  .tl-row .season{
+    font-family:var(--serif);
+    font-style:italic;
+    color:var(--gold);
+    font-size:1rem;
+    white-space:nowrap;
+  }
+  .tl-row p{
+    font-size:0.92rem;
+    color:var(--ink-dim);
+    font-weight:300;
+  }
+  @media (max-width:820px){
+    .parcours-grid{ grid-template-columns:1fr; }
+    .parcours-photo{ position:static; max-width:340px; }
+    .tl-row{ grid-template-columns:80px 1fr; }
+  }
+
+  /* ---------- FULL BLEED BREAK ---------- */
+  .bleed{
+    position:relative;
+    width:100vw;
+    margin-left:calc(-50vw + 50%);
+    height:78vh;
+    min-height:420px;
+    overflow:hidden;
+  }
+  .bleed img{
+    width:100%; height:100%;
+    object-fit:cover;
+  }
+  .bleed .bleed-tag{
+    position:absolute;
+    left:6vw; bottom:2.4rem;
+    z-index:2;
+    color:var(--ink);
+  }
+  .bleed .bleed-tag .eyebrow{ margin-bottom:0.6rem; }
+  .bleed .bleed-tag h3{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(1.6rem,3vw,2.6rem);
+    max-width:20ch;
+  }
+  .bleed::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(0deg, rgba(6,5,4,0.85) 0%, rgba(6,5,4,0) 42%);
+  }
+
+  /* ---------- PHOTO ENCADRÉE (image portrait non recadrée) ---------- */
+  .framed-photo{
+    padding:6.5rem 0;
+    text-align:center;
+  }
+  .framed-inner{
+    display:flex;
+    justify-content:center;
+    background:#000;
+  }
+  .framed-inner img{
+    max-height:82vh;
+    max-width:100%;
+    width:auto;
+    height:auto;
+    box-shadow:0 0 0 1px var(--hairline);
+  }
+  .framed-cap{
+    margin-top:1.8rem;
+  }
+  .framed-cap .eyebrow{ margin-bottom:0.6rem; display:block; }
+  .framed-cap h3{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(1.4rem,2.4vw,2rem);
+    color:var(--ink);
+  }
+  @media (max-width:720px){
+    .framed-inner img{ max-height:64vh; }
+  }
+
+  /* ---------- RESULTATS ---------- */
+  .results{ padding:6.5rem 0; }
+  .results-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--hairline);
+    border:1px solid var(--hairline);
+  }
+  .result-card{
+    background:var(--bg);
+    padding:2.6rem 2.2rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:230px;
+  }
+  .result-card .place{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:3.4rem;
+    color:var(--gold-bright);
+    line-height:1;
+  }
+  .result-card .meta{
+    margin-top:1.4rem;
+  }
+  .result-card .meta .event{
+    font-size:0.98rem;
+    color:var(--ink);
+    font-weight:400;
+  }
+  .result-card .meta .place-name{
+    margin-top:0.35rem;
+    font-size:0.75rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+  .result-card.highlight{
+    background:linear-gradient(160deg, rgba(201,161,90,0.09), transparent 60%);
+  }
+  @media (max-width:820px){
+    .results-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- OBJECTIFS QUOTE ---------- */
+  .objectifs{
+    padding:6rem 0;
+    border-top:1px solid var(--hairline);
+    border-bottom:1px solid var(--hairline);
+  }
+  .objectifs-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:4vw;
+  }
+  .objectifs h2{
+    font-family:var(--serif);
+    font-weight:400;
+    font-style:italic;
+    font-size:clamp(1.9rem, 3.2vw, 2.8rem);
+    line-height:1.25;
+    color:var(--ink);
+  }
+  .obj-list{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+  .obj-list .item{
+    display:flex;
+    gap:1.4rem;
+    padding:1.3rem 0;
+    border-top:1px solid var(--hairline);
+    align-items:baseline;
+  }
+  .obj-list .item:last-child{ border-bottom:1px solid var(--hairline); }
+  .obj-list .tag{
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+    width:96px;
+    flex-shrink:0;
+  }
+  .obj-list p{
+    font-size:0.98rem;
+    color:var(--ink-dim);
+    font-weight:300;
+  }
+  @media (max-width:820px){
+    .objectifs-grid{ grid-template-columns:1fr; gap:2.4rem; }
+  }
+
+  /* ---------- POURQUOI ME SOUTENIR ---------- */
+  .why{
+    padding:6.5rem 0;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:5vw;
+    align-items:center;
+  }
+  .why-copy p{
+    font-size:1rem;
+    color:var(--ink-dim);
+    margin-bottom:1.2rem;
+    max-width:52ch;
+  }
+  .why-list{
+    margin-top:2rem;
+    display:flex;
+    flex-direction:column;
+    gap:1.1rem;
+  }
+  .why-list div{
+    display:flex;
+    gap:1rem;
+    align-items:flex-start;
+    font-size:0.95rem;
+    color:var(--ink);
+  }
+  .why-list .dot{
+    width:6px; height:6px;
+    margin-top:0.55rem;
+    background:var(--gold);
+    border-radius:50%;
+    flex-shrink:0;
+  }
+  .why-photo{
+    aspect-ratio:3/4;
+    overflow:hidden;
+  }
+  .why-photo img{
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:40% 22%;
+  }
+  @media (max-width:820px){
+    .why{ grid-template-columns:1fr; }
+    .why-photo{ order:-1; max-width:340px; }
+  }
+
+  /* ---------- GALERIE ---------- */
+  .gallery{
+    padding:6.5rem 0;
+  }
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.4vw;
+  }
+  .gallery-grid figure{
+    overflow:hidden;
+    position:relative;
+  }
+  .gallery-grid img{
+    width:100%; height:100%;
+    object-fit:cover;
+    aspect-ratio:4/5;
+  }
+  .gallery-grid figcaption{
+    margin-top:0.8rem;
+    font-size:0.72rem;
+    letter-spacing:0.06em;
+    color:var(--ink-faint);
+  }
+  @media (max-width:600px){
+    .gallery-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- PARTNER / MATERIEL STRIP ---------- */
+  .partners{
+    padding:3.5rem 0 6rem;
+    border-top:1px solid var(--hairline);
+  }
+  .partners .eyebrow{ margin-bottom:1.8rem; display:block; }
+  .partners-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.6rem 3rem;
+  }
+  .partners-row span{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:1.3rem;
+    color:var(--ink-faint);
+  }
+
+  /* ---------- CTA BAND ---------- */
+  .cta-band{
+    position:relative;
+    padding:8rem 0;
+    text-align:center;
+    overflow:hidden;
+  }
+  .cta-band .bg{
+    position:absolute; inset:0;
+    background:radial-gradient(ellipse at 50% 30%, rgba(201,161,90,0.10), transparent 60%);
+  }
+  .cta-band h2{
+    position:relative;
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(2.2rem, 5vw, 4rem);
+    line-height:1.12;
+    max-width:16ch;
+    margin:0 auto 2.2rem;
+  }
+  .cta-band h2 em{ color:var(--gold-bright); font-style:italic; }
+  .cta-band .actions{
+    position:relative;
+    display:flex;
+    gap:1.2rem;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .cta-ghost{
+    display:inline-flex;
+    align-items:center;
+    gap:0.8rem;
+    padding:1rem 2.1rem;
+    border:1px solid var(--hairline);
+    color:var(--ink-dim);
+    text-decoration:none;
+    font-size:0.78rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    transition:all .35s ease;
+  }
+  .cta-ghost:hover{ border-color:var(--gold); color:var(--ink); }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:5rem 0 2.6rem;
+    border-top:1px solid var(--hairline);
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:3rem;
+    padding-bottom:3.4rem;
+  }
+  .footer-name{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:2rem;
+    color:var(--ink);
+  }
+  .footer-tagline{
+    margin-top:0.9rem;
+    font-size:0.88rem;
+    color:var(--ink-faint);
+    max-width:32ch;
+  }
+  .footer-col .eyebrow{ margin-bottom:1.1rem; display:block; }
+  .footer-col a, .footer-col p{
+    display:block;
+    font-size:0.95rem;
+    color:var(--ink-dim);
+    text-decoration:none;
+    margin-bottom:0.6rem;
+    transition:color .25s ease;
+  }
+  .footer-col a:hover{ color:var(--gold-bright); }
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-top:2rem;
+    border-top:1px solid var(--hairline);
+    font-size:0.72rem;
+    letter-spacing:0.06em;
+    color:var(--ink-faint);
+    flex-wrap:wrap;
+    gap:1rem;
+  }
+  @media (max-width:820px){
+    .footer-grid{ grid-template-columns:1fr; gap:2.2rem; }
+  }
+
+</style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="mark">M. Charrière</div>
+    <nav>
+      <a href="#parcours">Parcours</a>
+      <a href="#resultats">Résultats</a>
+      <a href="#objectifs">Objectifs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <img src="images/hero-corvatsch.jpg" alt="Mathéo Charrière en figure aérienne, halfpipe de Corvatsch">
+    <div class="hero-content">
+      <div class="hero-kicker">
+        <div class="line"></div>
+        <span>Ski Freestyle — Halfpipe</span>
+      </div>
+      <h1>Mathéo<br>Charrière</h1>
+      <p class="hero-sub">Originaire de Charmey, skieur freestyle depuis l'âge de 12 ans. Formé à la Sportmittelschule d'Engelberg, aujourd'hui pleinement engagé dans le programme de développement halfpipe mis en place par Swiss‑Ski.</p>
+      <div class="hero-bottom">
+        <div class="hero-ctas">
+          <a href="mailto:charrierematheo06@gmail.com?subject=Partenariat%20%E2%80%94%20Math%C3%A9o%20Charri%C3%A8re" class="cta">Devenir partenaire</a>
+          <a href="tel:+41799267259" class="cta-phone">ou +41 79 926 72 59</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>2026/27</strong>Saison à venir</div>
+          <div><strong>Halfpipe</strong>Discipline</div>
+          <div><strong>Swiss‑Ski</strong>Programme développement</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue">Découvrir</div>
+  </section>
+
+  <!-- ============ CHIFFRES ============ -->
+  <section class="wrap stats-strip">
+    <div class="stats-grid">
+      <div class="stat"><div class="n">600h</div><div class="l">D'entraînement par an</div></div>
+      <div class="stat"><div class="n">70</div><div class="l">Jours sur neige par saison</div></div>
+      <div class="stat"><div class="n">20</div><div class="l">Jours de compétition, nov.–avr.</div></div>
+      <div class="stat"><div class="n">4ᵉ</div><div class="l">Place, European Cup Premium, Laax</div></div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="hairline"></div></div>
+
+  <!-- ============ PARCOURS ============ -->
+  <section class="wrap parcours" id="parcours">
+    <div class="section-head">
+      <div class="num">01 — Portrait</div>
+      <h2>Un parcours construit saison après saison</h2>
+    </div>
+
+    <div class="parcours-grid">
+      <div class="parcours-photo">
+        <div class="frame">
+          <img src="images/livigno-moi-alois.jpg" alt="Mathéo Charrière (dossard 67) lors du World Rookie Tour de Livigno">
+        </div>
+        <div class="cap"><span>World Rookie Tour</span><span>Livigno, ITA</span></div>
+      </div>
+
+      <div>
+        <div class="bio">
+          <p>Je pratique le ski freestyle depuis mes 12 ans — avant ça, j'ai longtemps fait du ski de fond, mais je voulais toujours faire des sauts et des figures. J'ai été sélectionné dans les cadres ski romand, où j'ai passé trois ans à m'entraîner et à progresser. En mars 2022, j'ai passé avec succès les sélections pour intégrer la <strong>Sportmittelschule d'Engelberg</strong>, où j'étudie depuis août 2022 — une infrastructure qui me permet de m'entraîner pour réaliser mes rêves tout en assurant mon avenir professionnel.</p>
+          <p>Fin 2025, j'ai fait le choix de me réorienter entièrement vers le <strong>halfpipe</strong>. Un virage payant : dès ma première saison dans la discipline, intégré au programme d'entraînement spécifique mis en place par Swiss‑Ski, j'ai accumulé assez de points FIS pour viser mes premières Coupes du monde.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-row">
+            <div class="season">2023 / 24</div>
+            <p>11ᵉ FIS Schilthorn (Big Air) · 9ᵉ World Rookie Tour à Livigno (Slopestyle) · qualification aux championnats du monde juniors · 21ᵉ Europa Cup Premium à Corvatsch (Big Air).</p>
+          </div>
+          <div class="tl-row">
+            <div class="season">2024 / 25</div>
+            <p>5ᵉ FIS Schilthorn (Slopestyle) · 2ᵉ Europa Cup Rail Event à Davos · 35ᵉ Europa Cup Big Air à Davos.</p>
+          </div>
+          <div class="tl-row">
+            <div class="season">2025 / 26</div>
+            <p>Réorientation complète vers le halfpipe : 4ᵉ place à Laax et 7ᵉ à Corvatsch en European Cup Premium — assez de points FIS pour viser mes premières Coupes du monde.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLEED BREAK ============ -->
+  <div class="bleed">
+    <img src="images/pipe-laax.jpg" alt="Halfpipe de Laax, vue panoramique sur les Alpes" style="object-position:50% 69%;">
+    <div class="bleed-tag">
+      <div class="eyebrow">Terrain de jeu</div>
+      <h3>Le halfpipe de Laax, mars 2026</h3>
+    </div>
+  </div>
+
+  <!-- ============ RESULTATS ============ -->
+  <section class="wrap results" id="resultats">
+    <div class="section-head">
+      <div class="num">02 — Palmarès</div>
+      <h2>Mes résultats récents</h2>
+    </div>
+
+    <div class="results-grid">
+      <div class="result-card highlight">
+        <div class="place">4ᵉ</div>
+        <div class="meta">
+          <div class="event">European Cup Premium — Halfpipe</div>
+          <div class="place-name">Laax, Suisse · Avril 2026</div>
+        </div>
+      </div>
+      <div class="result-card highlight">
+        <div class="place">7ᵉ</div>
+        <div class="meta">
+          <div class="event">European Cup Premium — Halfpipe</div>
+          <div class="place-name">Corvatsch, Suisse · Avril 2026</div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="place">2ᵉ</div>
+        <div class="meta">
+          <div class="event">Europa Cup — Rail Event</div>
+          <div class="place-name">Davos, Suisse · 2024/25</div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="place">5ᵉ</div>
+        <div class="meta">
+          <div class="event">FIS — Slopestyle</div>
+          <div class="place-name">Schilthorn, Suisse · 2024/25</div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="place">9ᵉ</div>
+        <div class="meta">
+          <div class="event">World Rookie Tour — Slopestyle</div>
+          <div class="place-name">Livigno, Italie · 2023/24</div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="place">11ᵉ</div>
+        <div class="meta">
+          <div class="event">FIS — Big Air</div>
+          <div class="place-name">Schilthorn, Suisse · 2023/24</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PHOTO ENCADRÉE : HALFPIPE ACTION ============ -->
+  <section class="wrap framed-photo">
+    <div class="framed-inner">
+      <img src="images/action-slash-corvatsch.jpg" alt="Skis Völkl plantés au sommet du mur, halfpipe de Corvatsch">
+    </div>
+    <div class="framed-cap">
+      <div class="eyebrow">En piste</div>
+      <h3>Dans le pipe, Corvatsch</h3>
+    </div>
+  </section>
+
+  <!-- ============ OBJECTIFS ============ -->
+  <section class="wrap objectifs" id="objectifs">
+    <div class="objectifs-grid">
+      <h2>« Poursuivre sur cette lancée, avec l'ambition d'atteindre le plus haut niveau. »</h2>
+      <div class="obj-list">
+        <div class="item"><div class="tag">Court terme</div><p>Approfondir ma préparation estivale et confirmer ma progression en halfpipe sur le circuit Europa Cup.</p></div>
+        <div class="item"><div class="tag">Moyen terme</div><p>Intégrer les cadres Swiss‑Ski et participer à mes premières Coupes du monde.</p></div>
+        <div class="item"><div class="tag">Long terme</div><p>Faire partie des meilleurs — tops 10 en World Cup, Jeux Olympiques et X‑Games.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POURQUOI ME SOUTENIR ============ -->
+  <section class="wrap why">
+    <div class="why-copy">
+      <div class="eyebrow" style="margin-bottom:1.2rem;">03 — Partenariat</div>
+      <h2 style="font-family:var(--serif); font-weight:400; font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom:1.4rem;">Pourquoi me soutenir</h2>
+      <p>Le ski freestyle de haut niveau représente un budget annuel de près de 27'000.- CHF entre école-sport, licences, camps, déplacements et matériel. Je suis motivé, ambitieux et passionné — chaque partenariat me permettrait de soulager financièrement mes parents et de continuer à me former tout en pratiquant mon sport.</p>
+      <div class="why-list">
+        <div><div class="dot"></div>Une visibilité authentique sur le circuit European Cup et, bientôt, en Coupe du monde.</div>
+        <div><div class="dot"></div>Un jeune athlète suisse pleinement engagé dans le programme de développement halfpipe de Swiss‑Ski.</div>
+        <div><div class="dot"></div>Une place dans la famille du ski freestyle, aux côtés d'un partenariat qui compte.</div>
+      </div>
+    </div>
+    <div class="why-photo">
+      <img src="images/team-corvatsch.jpg" alt="Programme de développement halfpipe à Corvatsch">
+    </div>
+  </section>
+
+  <!-- ============ GALERIE ============ -->
+  <section class="wrap gallery">
+    <div class="eyebrow" style="margin-bottom:1.8rem; display:block;">Sur le circuit</div>
+    <div class="gallery-grid">
+      <figure>
+        <img src="images/glacier3000-team.jpg" alt="Séance d'entraînement d'équipe au Glacier 3000">
+        <figcaption>Glacier 3000, Suisse</figcaption>
+      </figure>
+      <figure>
+        <img src="images/schilthorn-collegues.jpg" alt="Avec des coéquipiers au Schilthorn">
+        <figcaption>Schilthorn, Suisse</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ PARTENAIRES MATERIEL ============ -->
+  <section class="wrap partners">
+    <span class="eyebrow">Équipement actuel</span>
+    <div class="partners-row">
+      <span>Völkl</span><span>Artym Apparel</span>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="wrap cta-band" id="contact">
+    <div class="bg"></div>
+    <h2>Prêt à <em>écrire la suite</em> de cette histoire ensemble ?</h2>
+    <div class="actions">
+      <a href="mailto:charrierematheo06@gmail.com?subject=Partenariat%20%E2%80%94%20Math%C3%A9o%20Charri%C3%A8re" class="cta">M'écrire</a>
+      <a href="tel:+41799267259" class="cta-ghost">M'appeler</a>
+      <a href="docs/dossier-partenariat-matheo-charriere.pdf" class="cta-ghost" target="_blank" rel="noopener">Télécharger le dossier complet</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-name">Mathéo Charrière</div>
+          <p class="footer-tagline">Skieur freestyle suisse — spécialiste halfpipe. Sportmittelschule Engelberg / Programme développement halfpipe Swiss‑Ski.</p>
+          <span class="eyebrow" style="display:block; margin-top:1.8rem; margin-bottom:0.6rem;">Basé à</span>
+          <p class="footer-tagline" style="margin-top:0;">Charmey, Fribourg — Engelberg, Obwald</p>
+        </div>
+        <div class="footer-col">
+          <span class="eyebrow">Contact</span>
+          <a href="mailto:charrierematheo06@gmail.com">charrierematheo06@gmail.com</a>
+          <a href="tel:+41799267259">+41 79 926 72 59</a>
+        </div>
+        <div class="footer-col">
+          <span class="eyebrow">Suivre</span>
+          <a href="https://instagram.com/mach8._" target="_blank" rel="noopener">Instagram — @mach8._</a>
+          <a href="https://www.tiktok.com/@matheo_charriere" target="_blank" rel="noopener">TikTok — @matheo_charriere</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Mathéo Charrière</span>
+        <span>Dossier de partenariat — Ski Freestyle Halfpipe</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
