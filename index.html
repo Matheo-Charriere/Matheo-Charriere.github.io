@@ -77,6 +77,11 @@
     letter-spacing:0.04em;
     color:var(--ink);
   }
+  .nav-right{
+    display:flex;
+    align-items:center;
+    gap:1.6rem;
+  }
   .nav nav{
     display:flex;
     gap:2.4rem;
@@ -91,6 +96,25 @@
   }
   @media (max-width:720px){
     .nav nav{ display:none; }
+  }
+  .lang-toggle{
+    font-family:var(--sans);
+    font-size:0.68rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink);
+    background:transparent;
+    border:1px solid rgba(242,237,228,0.35);
+    padding:0.4rem 0.8rem;
+    border-radius:2px;
+    cursor:pointer;
+    opacity:0.85;
+    transition:all .25s ease;
+    font-weight:500;
+  }
+  .lang-toggle:hover{
+    opacity:1;
+    border-color:var(--ink);
   }
 
   /* ---------- HERO ---------- */
@@ -744,12 +768,15 @@
 
   <header class="nav">
     <div class="mark">M. Charrière</div>
-    <nav>
-      <a href="#parcours">Parcours</a>
-      <a href="#resultats">Résultats</a>
-      <a href="#objectifs">Objectifs</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="nav-right">
+      <nav>
+        <a href="#parcours" data-i18n="nav-parcours">Parcours</a>
+        <a href="#resultats" data-i18n="nav-resultats">Résultats</a>
+        <a href="#objectifs" data-i18n="nav-objectifs">Objectifs</a>
+        <a href="#contact" data-i18n="nav-contact">Contact</a>
+      </nav>
+      <button type="button" class="lang-toggle" id="langToggle" aria-label="Switch to English">EN</button>
+    </div>
   </header>
 
   <!-- ============ HERO ============ -->
@@ -758,32 +785,32 @@
     <div class="hero-content">
       <div class="hero-kicker">
         <div class="line"></div>
-        <span>Ski Freestyle — Halfpipe</span>
+        <span data-i18n="hero-kicker">Ski Freestyle — Halfpipe</span>
       </div>
       <h1>Mathéo<br>Charrière</h1>
-      <p class="hero-sub">Originaire de Charmey, skieur freestyle depuis l'âge de 12 ans. Formé à la Sportmittelschule d'Engelberg, aujourd'hui pleinement engagé dans le programme de développement halfpipe mis en place par Swiss‑Ski.</p>
+      <p class="hero-sub" data-i18n="hero-sub">Originaire de Charmey, skieur freestyle depuis l'âge de 12 ans. Formé à la Sportmittelschule d'Engelberg, aujourd'hui pleinement engagé dans le programme de développement halfpipe mis en place par Swiss‑Ski.</p>
       <div class="hero-bottom">
         <div class="hero-ctas">
-          <a href="mailto:charrierematheo06@gmail.com?subject=Partenariat%20%E2%80%94%20Math%C3%A9o%20Charri%C3%A8re" class="cta">Devenir partenaire</a>
-          <a href="tel:+41799267259" class="cta-phone">ou +41 79 926 72 59</a>
+          <a href="mailto:charrierematheo06@gmail.com?subject=Partenariat%20%E2%80%94%20Math%C3%A9o%20Charri%C3%A8re" class="cta" data-i18n="hero-cta">Devenir partenaire</a>
+          <a href="tel:+41799267259" class="cta-phone" data-i18n="hero-cta-phone">ou +41 79 926 72 59</a>
         </div>
         <div class="hero-meta">
-          <div><strong>2026/27</strong>Saison à venir</div>
-          <div><strong>Halfpipe</strong>Discipline</div>
-          <div><strong>Swiss‑Ski</strong>Programme développement</div>
+          <div><strong>2026/27</strong><span data-i18n="hero-meta-1">Saison à venir</span></div>
+          <div><strong>Halfpipe</strong><span data-i18n="hero-meta-2">Discipline</span></div>
+          <div><strong>Swiss‑Ski</strong><span data-i18n="hero-meta-3">Programme développement</span></div>
         </div>
       </div>
     </div>
-    <div class="scroll-cue">Découvrir</div>
+    <div class="scroll-cue" data-i18n="scroll-cue">Découvrir</div>
   </section>
 
   <!-- ============ CHIFFRES ============ -->
   <section class="wrap stats-strip">
     <div class="stats-grid">
-      <div class="stat"><div class="n">600h</div><div class="l">D'entraînement par an</div></div>
-      <div class="stat"><div class="n">70</div><div class="l">Jours sur neige par saison</div></div>
-      <div class="stat"><div class="n">20</div><div class="l">Jours de compétition, nov.–avr.</div></div>
-      <div class="stat"><div class="n">4ᵉ</div><div class="l">Place, European Cup Premium, Laax</div></div>
+      <div class="stat"><div class="n">600h</div><div class="l" data-i18n="stat-1">D'entraînement par an</div></div>
+      <div class="stat"><div class="n">70</div><div class="l" data-i18n="stat-2">Jours sur neige par saison</div></div>
+      <div class="stat"><div class="n">20</div><div class="l" data-i18n="stat-3">Jours de compétition, nov.–avr.</div></div>
+      <div class="stat"><div class="n">4ᵉ</div><div class="l" data-i18n="stat-4">Place, European Cup Premium, Laax</div></div>
     </div>
   </section>
 
@@ -793,7 +820,7 @@
   <section class="wrap parcours" id="parcours">
     <div class="section-head">
       <div class="num">01 — Portrait</div>
-      <h2>Un parcours construit saison après saison</h2>
+      <h2 data-i18n="parcours-h2">Un parcours construit saison après saison</h2>
     </div>
 
     <div class="parcours-grid">
@@ -806,22 +833,22 @@
 
       <div>
         <div class="bio">
-          <p>Je pratique le ski freestyle depuis mes 12 ans — avant ça, j'ai longtemps fait du ski de fond, mais je voulais toujours faire des sauts et des figures. J'ai été sélectionné dans les cadres ski romand, où j'ai passé trois ans à m'entraîner et à progresser. En mars 2022, j'ai passé avec succès les sélections pour intégrer la <strong>Sportmittelschule d'Engelberg</strong>, où j'étudie depuis août 2022 — une infrastructure qui me permet de m'entraîner pour réaliser mes rêves tout en assurant mon avenir professionnel.</p>
-          <p>Fin 2025, j'ai fait le choix de me réorienter entièrement vers le <strong>halfpipe</strong>. Un virage payant : dès ma première saison dans la discipline, intégré au programme d'entraînement spécifique mis en place par Swiss‑Ski, j'ai accumulé assez de points FIS pour viser mes premières Coupes du monde.</p>
+          <p data-i18n="bio-1">Je pratique le ski freestyle depuis mes 12 ans — avant ça, j'ai longtemps fait du ski de fond, mais je voulais toujours faire des sauts et des figures. J'ai été sélectionné dans les cadres ski romand, où j'ai passé trois ans à m'entraîner et à progresser. En mars 2022, j'ai passé avec succès les sélections pour intégrer la <strong>Sportmittelschule d'Engelberg</strong>, où j'étudie depuis août 2022 — une infrastructure qui me permet de m'entraîner pour réaliser mes rêves tout en assurant mon avenir professionnel.</p>
+          <p data-i18n="bio-2">Fin 2025, j'ai fait le choix de me réorienter entièrement vers le <strong>halfpipe</strong>. Un virage payant : dès ma première saison dans la discipline, intégré au programme d'entraînement spécifique mis en place par Swiss‑Ski, j'ai accumulé assez de points FIS pour viser mes premières Coupes du monde.</p>
         </div>
 
         <div class="timeline">
           <div class="tl-row">
             <div class="season">2023 / 24</div>
-            <p>11ᵉ FIS Schilthorn (Big Air) · 9ᵉ World Rookie Tour à Livigno (Slopestyle) · qualification aux championnats du monde juniors · 21ᵉ Europa Cup Premium à Corvatsch (Big Air).</p>
+            <p data-i18n="tl-1">11ᵉ FIS Schilthorn (Big Air) · 9ᵉ World Rookie Tour à Livigno (Slopestyle) · qualification aux championnats du monde juniors · 21ᵉ Europa Cup Premium à Corvatsch (Big Air).</p>
           </div>
           <div class="tl-row">
             <div class="season">2024 / 25</div>
-            <p>5ᵉ FIS Schilthorn (Slopestyle) · 2ᵉ Europa Cup Rail Event à Davos · 35ᵉ Europa Cup Big Air à Davos.</p>
+            <p data-i18n="tl-2">5ᵉ FIS Schilthorn (Slopestyle) · 2ᵉ Europa Cup Rail Event à Davos · 35ᵉ Europa Cup Big Air à Davos.</p>
           </div>
           <div class="tl-row">
             <div class="season">2025 / 26</div>
-            <p>Réorientation complète vers le halfpipe : 4ᵉ place à Laax et 7ᵉ à Corvatsch en European Cup Premium — assez de points FIS pour viser mes premières Coupes du monde.</p>
+            <p data-i18n="tl-3">Réorientation complète vers le halfpipe : 4ᵉ place à Laax et 7ᵉ à Corvatsch en European Cup Premium — assez de points FIS pour viser mes premières Coupes du monde.</p>
           </div>
         </div>
       </div>
@@ -832,8 +859,8 @@
   <div class="bleed">
     <img src="images/pipe-laax.jpg" alt="Halfpipe de Laax, vue panoramique sur les Alpes" style="object-position:50% 69%;">
     <div class="bleed-tag">
-      <div class="eyebrow">Terrain de jeu</div>
-      <h3>Le halfpipe de Laax, mars 2026</h3>
+      <div class="eyebrow" data-i18n="bleed-eyebrow">Terrain de jeu</div>
+      <h3 data-i18n="bleed-h3">Le halfpipe de Laax, mars 2026</h3>
     </div>
   </div>
 
@@ -841,7 +868,7 @@
   <section class="wrap results" id="resultats">
     <div class="section-head">
       <div class="num">02 — Palmarès</div>
-      <h2>Mes résultats récents</h2>
+      <h2 data-i18n="resultats-h2">Mes résultats récents</h2>
     </div>
 
     <div class="results-grid">
@@ -849,42 +876,42 @@
         <div class="place">4ᵉ</div>
         <div class="meta">
           <div class="event">European Cup Premium — Halfpipe</div>
-          <div class="place-name">Laax, Suisse · Avril 2026</div>
+          <div class="place-name" data-i18n="place-1">Laax, Suisse · Avril 2026</div>
         </div>
       </div>
       <div class="result-card highlight">
         <div class="place">7ᵉ</div>
         <div class="meta">
           <div class="event">European Cup Premium — Halfpipe</div>
-          <div class="place-name">Corvatsch, Suisse · Avril 2026</div>
+          <div class="place-name" data-i18n="place-2">Corvatsch, Suisse · Avril 2026</div>
         </div>
       </div>
       <div class="result-card">
         <div class="place">2ᵉ</div>
         <div class="meta">
           <div class="event">Europa Cup — Rail Event</div>
-          <div class="place-name">Davos, Suisse · 2024/25</div>
+          <div class="place-name" data-i18n="place-3">Davos, Suisse · 2024/25</div>
         </div>
       </div>
       <div class="result-card">
         <div class="place">5ᵉ</div>
         <div class="meta">
           <div class="event">FIS — Slopestyle</div>
-          <div class="place-name">Schilthorn, Suisse · 2024/25</div>
+          <div class="place-name" data-i18n="place-4">Schilthorn, Suisse · 2024/25</div>
         </div>
       </div>
       <div class="result-card">
         <div class="place">9ᵉ</div>
         <div class="meta">
           <div class="event">World Rookie Tour — Slopestyle</div>
-          <div class="place-name">Livigno, Italie · 2023/24</div>
+          <div class="place-name" data-i18n="place-5">Livigno, Italie · 2023/24</div>
         </div>
       </div>
       <div class="result-card">
         <div class="place">11ᵉ</div>
         <div class="meta">
           <div class="event">FIS — Big Air</div>
-          <div class="place-name">Schilthorn, Suisse · 2023/24</div>
+          <div class="place-name" data-i18n="place-6">Schilthorn, Suisse · 2023/24</div>
         </div>
       </div>
     </div>
@@ -896,19 +923,19 @@
       <img src="images/action-slash-corvatsch.jpg" alt="Skis Völkl plantés au sommet du mur, halfpipe de Corvatsch">
     </div>
     <div class="framed-cap">
-      <div class="eyebrow">En piste</div>
-      <h3>Dans le pipe, Corvatsch</h3>
+      <div class="eyebrow" data-i18n="framed-eyebrow">En piste</div>
+      <h3 data-i18n="framed-h3">Dans le pipe, Corvatsch</h3>
     </div>
   </section>
 
   <!-- ============ OBJECTIFS ============ -->
   <section class="wrap objectifs" id="objectifs">
     <div class="objectifs-grid">
-      <h2>« Poursuivre sur cette lancée, avec l'ambition d'atteindre le plus haut niveau. »</h2>
+      <h2 data-i18n="objectifs-quote">« Poursuivre sur cette lancée, avec l'ambition d'atteindre le plus haut niveau. »</h2>
       <div class="obj-list">
-        <div class="item"><div class="tag">Court terme</div><p>Approfondir ma préparation estivale et confirmer ma progression en halfpipe sur le circuit Europa Cup.</p></div>
-        <div class="item"><div class="tag">Moyen terme</div><p>Intégrer les cadres Swiss‑Ski et participer à mes premières Coupes du monde.</p></div>
-        <div class="item"><div class="tag">Long terme</div><p>Faire partie des meilleurs — tops 10 en World Cup, Jeux Olympiques et X‑Games.</p></div>
+        <div class="item"><div class="tag" data-i18n="obj-tag-1">Court terme</div><p data-i18n="obj-1">Approfondir ma préparation estivale et confirmer ma progression en halfpipe sur le circuit Europa Cup.</p></div>
+        <div class="item"><div class="tag" data-i18n="obj-tag-2">Moyen terme</div><p data-i18n="obj-2">Intégrer les cadres Swiss‑Ski et participer à mes premières Coupes du monde.</p></div>
+        <div class="item"><div class="tag" data-i18n="obj-tag-3">Long terme</div><p data-i18n="obj-3">Faire partie des meilleurs — tops 10 en World Cup, Jeux Olympiques et X‑Games.</p></div>
       </div>
     </div>
   </section>
@@ -916,13 +943,13 @@
   <!-- ============ POURQUOI ME SOUTENIR ============ -->
   <section class="wrap why">
     <div class="why-copy">
-      <div class="eyebrow" style="margin-bottom:1.2rem;">03 — Partenariat</div>
-      <h2 style="font-family:var(--serif); font-weight:400; font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom:1.4rem;">Pourquoi me soutenir</h2>
-      <p>Le ski freestyle de haut niveau représente un budget annuel dans les alentours de 30'000.- CHF entre école-sport, licences, camps, déplacements et matériel. Je suis motivé, ambitieux et passionné — chaque partenariat me permettrait de soulager financièrement mes parents et de continuer à me former tout en pratiquant mon sport.</p>
+      <div class="eyebrow" style="margin-bottom:1.2rem;" data-i18n="why-eyebrow">03 — Partenariat</div>
+      <h2 style="font-family:var(--serif); font-weight:400; font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom:1.4rem;" data-i18n="why-h2">Pourquoi me soutenir</h2>
+      <p data-i18n="why-p">Le ski freestyle de haut niveau représente un budget annuel dans les alentours de 30'000.- CHF entre école-sport, licences, camps, déplacements et matériel. Je suis motivé, ambitieux et passionné — chaque partenariat me permettrait de soulager financièrement mes parents et de continuer à me former tout en pratiquant mon sport.</p>
       <div class="why-list">
-        <div><div class="dot"></div>Une visibilité authentique sur le circuit European Cup et, bientôt, en Coupe du monde.</div>
-        <div><div class="dot"></div>Un jeune athlète suisse pleinement engagé dans le programme de développement halfpipe de Swiss‑Ski.</div>
-        <div><div class="dot"></div>Une place dans la famille du ski freestyle, aux côtés d'un partenariat qui compte.</div>
+        <div><div class="dot"></div><span data-i18n="why-1">Une visibilité authentique sur le circuit European Cup et, bientôt, en Coupe du monde.</span></div>
+        <div><div class="dot"></div><span data-i18n="why-2">Un jeune athlète suisse pleinement engagé dans le programme de développement halfpipe de Swiss‑Ski.</span></div>
+        <div><div class="dot"></div><span data-i18n="why-3">Une place dans la famille du ski freestyle, aux côtés d'un partenariat qui compte.</span></div>
       </div>
     </div>
     <div class="why-photo">
@@ -932,22 +959,22 @@
 
   <!-- ============ GALERIE ============ -->
   <section class="wrap gallery">
-    <div class="eyebrow" style="margin-bottom:1.8rem; display:block;">Sur le circuit</div>
+    <div class="eyebrow" style="margin-bottom:1.8rem; display:block;" data-i18n="gallery-eyebrow">Sur le circuit</div>
     <div class="gallery-grid">
       <figure>
         <img src="images/glacier3000-team.jpg" alt="Séance d'entraînement d'équipe au Glacier 3000">
-        <figcaption>Glacier 3000, Suisse</figcaption>
+        <figcaption data-i18n="gallery-cap-1">Glacier 3000, Suisse</figcaption>
       </figure>
       <figure>
         <img src="images/schilthorn-collegues.jpg" alt="Avec des coéquipiers au Schilthorn">
-        <figcaption>Schilthorn, Suisse</figcaption>
+        <figcaption data-i18n="gallery-cap-2">Schilthorn, Suisse</figcaption>
       </figure>
     </div>
   </section>
 
   <!-- ============ PARTENAIRES MATERIEL ============ -->
   <section class="wrap partners">
-    <span class="eyebrow">Équipement actuel</span>
+    <span class="eyebrow" data-i18n="partners-eyebrow">Équipement actuel</span>
     <div class="partners-row">
       <span>Völkl</span><span>Artym Apparel</span>
     </div>
@@ -956,11 +983,11 @@
   <!-- ============ CTA BAND ============ -->
   <section class="wrap cta-band" id="contact">
     <div class="bg"></div>
-    <h2>Prêt à <em>écrire la suite</em> de cette histoire ensemble ?</h2>
+    <h2 data-i18n="cta-h2">Prêt à <em>écrire la suite</em> de cette histoire ensemble ?</h2>
     <div class="actions">
-      <a href="mailto:charrierematheo06@gmail.com?subject=Partenariat%20%E2%80%94%20Math%C3%A9o%20Charri%C3%A8re" class="cta">M'écrire</a>
-      <a href="tel:+41799267259" class="cta-ghost">M'appeler</a>
-      <a href="docs/dossier-partenariat-matheo-charriere.pdf" class="cta-ghost" target="_blank" rel="noopener">Télécharger le dossier complet</a>
+      <a href="mailto:charrierematheo06@gmail.com?subject=Partenariat%20%E2%80%94%20Math%C3%A9o%20Charri%C3%A8re" class="cta" data-i18n="cta-email">M'écrire</a>
+      <a href="tel:+41799267259" class="cta-ghost" data-i18n="cta-call">M'appeler</a>
+      <a href="docs/dossier-partenariat-matheo-charriere.pdf" class="cta-ghost" target="_blank" rel="noopener" data-i18n="cta-download">Télécharger le dossier complet</a>
     </div>
   </section>
 
@@ -970,27 +997,130 @@
       <div class="footer-grid">
         <div>
           <div class="footer-name">Mathéo Charrière</div>
-          <p class="footer-tagline">Skieur freestyle suisse — spécialiste halfpipe. Sportmittelschule Engelberg / Programme développement halfpipe Swiss‑Ski.</p>
-          <span class="eyebrow" style="display:block; margin-top:1.8rem; margin-bottom:0.6rem;">Basé à</span>
+          <p class="footer-tagline" data-i18n="footer-tagline">Skieur freestyle suisse — spécialiste halfpipe. Sportmittelschule Engelberg / Programme développement halfpipe Swiss‑Ski.</p>
+          <span class="eyebrow" style="display:block; margin-top:1.8rem; margin-bottom:0.6rem;" data-i18n="footer-basedin">Basé à</span>
           <p class="footer-tagline" style="margin-top:0;">Charmey, Fribourg — Engelberg, Obwald</p>
         </div>
         <div class="footer-col">
-          <span class="eyebrow">Contact</span>
+          <span class="eyebrow" data-i18n="footer-contact">Contact</span>
           <a href="mailto:charrierematheo06@gmail.com">charrierematheo06@gmail.com</a>
           <a href="tel:+41799267259">+41 79 926 72 59</a>
         </div>
         <div class="footer-col">
-          <span class="eyebrow">Suivre</span>
+          <span class="eyebrow" data-i18n="footer-follow">Suivre</span>
           <a href="https://instagram.com/mach8._" target="_blank" rel="noopener">Instagram — @mach8._</a>
           <a href="https://www.tiktok.com/@matheo_charriere" target="_blank" rel="noopener">TikTok — @matheo_charriere</a>
         </div>
       </div>
       <div class="footer-bottom">
         <span>© 2026 Mathéo Charrière</span>
-        <span>Dossier de partenariat — Ski Freestyle Halfpipe</span>
+        <span data-i18n="footer-bottom-2">Dossier de partenariat — Ski Freestyle Halfpipe</span>
       </div>
     </div>
   </footer>
+
+  <script>
+  (function(){
+    var EN = {
+      "nav-parcours": "Journey",
+      "nav-resultats": "Results",
+      "nav-objectifs": "Goals",
+      "nav-contact": "Contact",
+      "hero-kicker": "Freestyle Skiing — Halfpipe",
+      "hero-sub": "From Charmey, freestyle skier since the age of 12. Trained at the Sportmittelschule Engelberg, now fully committed to the halfpipe development programme set up by Swiss‑Ski.",
+      "hero-cta": "Become a partner",
+      "hero-cta-phone": "or +41 79 926 72 59",
+      "hero-meta-1": "Upcoming season",
+      "hero-meta-2": "Discipline",
+      "hero-meta-3": "Development programme",
+      "scroll-cue": "Discover",
+      "stat-1": "Training per year",
+      "stat-2": "Days on snow per season",
+      "stat-3": "Competition days, Nov.–Apr.",
+      "stat-4": "Place, European Cup Premium, Laax",
+      "parcours-h2": "A journey built season after season",
+      "bio-1": "I've been freestyle skiing since I was 12 — before that, I did cross-country skiing for years, but I always wanted to do jumps and tricks. I was selected for the Ski Romand development squads, where I spent three years training and progressing. In March 2022, I successfully passed the selection to join <strong>Sportmittelschule Engelberg</strong>, where I've been studying since August 2022 — a structure that lets me train toward my dreams while securing my professional future.",
+      "bio-2": "At the end of 2025, I chose to fully refocus on <strong>halfpipe</strong>. It paid off: in my very first season in the discipline, having joined the dedicated training programme set up by Swiss‑Ski, I earned enough FIS points to aim for my first World Cup starts.",
+      "tl-1": "11th FIS Schilthorn (Big Air) · 9th World Rookie Tour in Livigno (Slopestyle) · qualified for the Junior World Championships · 21st Europa Cup Premium in Corvatsch (Big Air).",
+      "tl-2": "5th FIS Schilthorn (Slopestyle) · 2nd Europa Cup Rail Event in Davos · 35th Europa Cup Big Air in Davos.",
+      "tl-3": "Complete shift to halfpipe: 4th place in Laax and 7th in Corvatsch at the European Cup Premium — enough FIS points to aim for my first World Cup starts.",
+      "bleed-eyebrow": "Training ground",
+      "bleed-h3": "The Laax halfpipe, March 2026",
+      "resultats-h2": "Recent results",
+      "place-1": "Laax, Switzerland · April 2026",
+      "place-2": "Corvatsch, Switzerland · April 2026",
+      "place-3": "Davos, Switzerland · 2024/25",
+      "place-4": "Schilthorn, Switzerland · 2024/25",
+      "place-5": "Livigno, Italy · 2023/24",
+      "place-6": "Schilthorn, Switzerland · 2023/24",
+      "framed-eyebrow": "On snow",
+      "framed-h3": "In the pipe, Corvatsch",
+      "objectifs-quote": "“Building on this momentum, with the ambition of reaching the very top.”",
+      "obj-tag-1": "Short term",
+      "obj-1": "Deepen my summer preparation and confirm my progress in halfpipe on the Europa Cup circuit.",
+      "obj-tag-2": "Medium term",
+      "obj-2": "Join the Swiss‑Ski squads and compete in my first World Cup events.",
+      "obj-tag-3": "Long term",
+      "obj-3": "Be among the best — top 10 finishes in the World Cup, the Olympics and the X‑Games.",
+      "why-eyebrow": "03 — Partnership",
+      "why-h2": "Why support me",
+      "why-p": "High-level freestyle skiing represents an annual budget of around CHF 30,000, covering school-sport tuition, licences, camps, travel and equipment. I'm motivated, ambitious and passionate — every partnership would help ease the financial load on my parents and let me keep training while pursuing my education.",
+      "why-1": "Genuine visibility on the European Cup circuit and, soon, in the World Cup.",
+      "why-2": "A young Swiss athlete fully committed to Swiss‑Ski's halfpipe development programme.",
+      "why-3": "A place in the freestyle skiing family, backed by a partnership that matters.",
+      "gallery-eyebrow": "On the circuit",
+      "gallery-cap-1": "Glacier 3000, Switzerland",
+      "gallery-cap-2": "Schilthorn, Switzerland",
+      "partners-eyebrow": "Current gear",
+      "cta-h2": "Ready to <em>write the next chapter</em> of this story together?",
+      "cta-email": "Email me",
+      "cta-call": "Call me",
+      "cta-download": "Download the full dossier",
+      "footer-tagline": "Swiss freestyle skier — halfpipe specialist. Sportmittelschule Engelberg / Swiss‑Ski halfpipe development programme.",
+      "footer-basedin": "Based in",
+      "footer-contact": "Contact",
+      "footer-follow": "Follow",
+      "footer-bottom-2": "Partnership dossier — Freestyle Skiing Halfpipe"
+    };
+
+    var META = {
+      fr: { title: "Mathéo Charrière — Ski Freestyle Halfpipe", desc: "Mathéo Charrière, skieur freestyle halfpipe suisse. Dossier de partenariat et de sponsoring." },
+      en: { title: "Mathéo Charrière — Freestyle Skiing Halfpipe", desc: "Mathéo Charrière, Swiss freestyle halfpipe skier. Partnership and sponsorship dossier." }
+    };
+
+    var nodes = document.querySelectorAll('[data-i18n]');
+    var FR = {};
+    nodes.forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      FR[key] = el.innerHTML;
+    });
+
+    var btn = document.getElementById('langToggle');
+    var current = localStorage.getItem('site-lang') || 'fr';
+
+    function apply(lang){
+      var dict = lang === 'en' ? EN : FR;
+      nodes.forEach(function(el){
+        var key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) el.innerHTML = dict[key];
+      });
+      document.documentElement.lang = lang;
+      document.title = META[lang].title;
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', META[lang].desc);
+      btn.textContent = lang === 'en' ? 'FR' : 'EN';
+      btn.setAttribute('aria-label', lang === 'en' ? 'Passer en français' : 'Switch to English');
+      current = lang;
+      localStorage.setItem('site-lang', lang);
+    }
+
+    btn.addEventListener('click', function(){
+      apply(current === 'en' ? 'fr' : 'en');
+    });
+
+    if (current === 'en') apply('en');
+  })();
+  </script>
 
 </body>
 </html>
